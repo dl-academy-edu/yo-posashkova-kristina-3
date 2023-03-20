@@ -1,0 +1,87 @@
+.header {
+  position: sticky;
+  font-weight: 700;
+}
+
+.burger-menu {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.burger-menu:hover {
+  opacity: 0.5;
+  transition: 0.4s;
+}
+
+.nav {
+  display: flex;
+  padding: 33px 0 32px 0;
+  justify-content: space-between;
+  border-bottom: 1px solid #828282;
+
+  &__list {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__link {
+    color: $color-text-2;
+  }
+
+  &__link-home {
+    color: $color-text;
+  }
+
+  &__link:hover {
+    color: $color-text;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+  &__link:active {
+    opacity: 0.3;
+  }
+
+  &__link:focus {
+    color: $color-text;
+    cursor: pointer;
+  }
+
+
+  &__button {
+    background: none;
+    font-weight: 700;
+    color: $color-text-2;
+  }
+
+  &__button:focus {
+    color: $color-text;
+    cursor: pointer;
+  }
+
+  &__button:hover {
+    color: $color-text;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+  &__button:active {
+    opacity: 0.3;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    position: relative;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+  }
+}
